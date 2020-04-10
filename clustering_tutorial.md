@@ -49,7 +49,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
 ```
 
 ```
@@ -60,7 +60,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ```
@@ -320,7 +320,7 @@ from that method, too.
 
 ## Implement clustering
 
-Now that we've identified the number of clusters (`k=2`), we can go ahead
+Now that we've identified the number of clusters (`k=4`), we can go ahead
 and run our clustering algorithm to see how our states separate by arrests. We
 can do this with the built-in `kmeans()` function.
 
@@ -384,6 +384,7 @@ principal components (from a principal components analysis [PCA]).
 
 
 ```r
+# let's visualize our clusters on those first two principal components
 fviz_cluster(arrest_clusters, data = arrest_df)
 ```
 
@@ -447,6 +448,7 @@ arrest_clusters_k2
 
 
 ```r
+# what do our k=2 results look like?
 fviz_cluster(arrest_clusters_k2, data = arrest_df)
 ```
 
@@ -456,3 +458,12 @@ In looking at the cluster means from the k-means clustering output, it looks
 as though we're mostly dividing here into low-arrest and high-arrest states.
 This demonstrates the effectiveness of the method, but it may not be as 
 insightful as the `k=4` clustering results (above).
+
+***
+
+# Additional exercises
+
+Now that you've tackled this in a non-psychology dataset, check out some of 
+the open datasets provided by the 
+[Open-Source Psychometrics Project](https://openpsychometrics.org/_rawdata/).
+Try your hand at clustering with them!
