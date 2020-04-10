@@ -277,7 +277,7 @@ from that method, too.
 
 ## Implement clustering
 
-Now that we've identified the number of clusters (`k=2`), we can go ahead
+Now that we've identified the number of clusters (`k=4`), we can go ahead
 and run our clustering algorithm to see how our states separate by arrests. We
 can do this with the built-in `kmeans()` function.
 
